@@ -1,0 +1,121 @@
+{
+  "project": "E.N.A. — Exploración, Naturaleza y Análisis",
+  "study_area": "Centro Ambiental Chimayoy, Pasto, Nariño, Colombia",
+  "reference_period": "2015–2025",
+  "datasets": [
+    {
+      "id": "gpm",
+      "name": "GPM IMERG 3IMERGM V07B",
+      "file": "gpm_monthly.json",
+      "coverage": "2020-01 a 2025-08",
+      "records": 68,
+      "observed": 63,
+      "missing": 5,
+      "status": "integrated",
+      "resolution": "0.1° (~10 km)",
+      "caveat": "Celda regional; no resuelve microvariabilidad del predio.",
+      "missing_dates": [
+        "2021-01",
+        "2021-08",
+        "2022-05",
+        "2023-02",
+        "2023-07"
+      ]
+    },
+    {
+      "id": "gpm_grid",
+      "name": "GPM IMERG grid 5×5",
+      "file": "gpm_spatial_grid.json",
+      "coverage": "2020-01 a 2025-09",
+      "records": 1725,
+      "status": "integrated_context",
+      "caveat": "Cuadrícula regional, campo original mm/h; se presenta separada del promedio zonal.",
+      "dates": 69,
+      "points": 25
+    },
+    {
+      "id": "power",
+      "name": "NASA POWER Point Monthly",
+      "file": "nasa_power_monthly.json",
+      "coverage": "2015-01 a 2025-12",
+      "records": 924,
+      "status": "integrated_context",
+      "caveat": "Datos modelados/asimilados regionales; no estación local."
+    },
+    {
+      "id": "soil_wetness",
+      "name": "Indicadores de humedad del suelo NASA POWER / MERRA-2",
+      "file": "humidity_indicators.json",
+      "coverage": "2015-01 a 2025-12",
+      "records": 132,
+      "parameters": [
+        "GWETTOP",
+        "GWETROOT",
+        "GWETPROF"
+      ],
+      "frequency": "monthly",
+      "status": "integrated_context",
+      "resolution": "Regional MERRA-2 grid",
+      "units": "Dimensionless wetness fraction (1)",
+      "caveat": "Regional modeled/assimilated data; not in-situ measurements, not volumetric soil moisture content (m³/m³), and not SMAP. The CSV RH2M field is already represented by the existing NASA POWER relative-humidity series.",
+      "observed": 132
+    },
+    {
+      "id": "ndvi",
+      "name": "MODIS MOD13Q1 NDVI",
+      "file": "modis_ndvi_16day.json",
+      "coverage": "2015-04 a 2025-12",
+      "records": 63,
+      "status": "integrated_qa_filtered",
+      "caveat": "Solo píxeles Reliability=0; fechas sin píxel válido se omiten.",
+      "source_rasters": 254,
+      "records_after_qa": 63,
+      "qa_rule": "Pixel Reliability = 0"
+    },
+    {
+      "id": "evi",
+      "name": "MODIS MOD13Q1 EVI",
+      "file": "modis_evi_16day.json",
+      "coverage": "2015-04 a 2025-12",
+      "records": 63,
+      "status": "integrated_qa_filtered",
+      "caveat": "Solo píxeles Reliability=0; fechas sin píxel válido se omiten.",
+      "source_rasters": 253,
+      "records_after_qa": 63,
+      "qa_rule": "Pixel Reliability = 0"
+    },
+    {
+      "id": "lst_day",
+      "name": "MODIS MOD11A2 LST Day",
+      "file": "modis_lst_day_8day.json",
+      "status": "integrated_qa_filtered",
+      "caveat": "QA mandatory bits=00; 1 km es contexto térmico regional.",
+      "coverage": "2015-01 a 2025-12",
+      "records": 97,
+      "source_rasters": 416,
+      "rasters_without_matching_qa": 86,
+      "records_after_qa": 97,
+      "qa_rule": "Mandatory QA bits 0–1 = 00"
+    },
+    {
+      "id": "lst_night",
+      "name": "MODIS MOD11A2 LST Night",
+      "file": "modis_lst_night_8day.json",
+      "status": "integrated_qa_filtered",
+      "caveat": "QA mandatory bits=00; cobertura reducida por falta de rasters QC coincidentes.",
+      "coverage": "2015-03 a 2025-11",
+      "records": 59,
+      "source_rasters": 473,
+      "rasters_without_matching_qa": 364,
+      "records_after_qa": 59,
+      "qa_rule": "Mandatory QA bits 0–1 = 00"
+    },
+    {
+      "id": "smap",
+      "name": "SMAP",
+      "file": null,
+      "status": "processing",
+      "caveat": "La extracción de AppEEARS continúa en procesamiento; no se incorpora a las series hasta contar con los archivos descargados y validados."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+numpy
+pandas
+xarray
+h5netcdf
+dask

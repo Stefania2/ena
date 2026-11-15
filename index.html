@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E.N.A. integra análisis de tendencias ambientales, observación satelital y exploración terrestre complementaria en Chimayoy, Pasto, Nariño.">
+  <meta name="theme-color" content="#0b1120">
+  <title>E.N.A. | Investigación y observación ambiental</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="assets/ena-estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="E.N.A. inicio">
+      <span class="brand-symbol"><span></span><span></span><span></span></span>
+      <span class="brand-name">E.N.A.<small>EXPLORACIÓN · NATURALEZA · ANÁLISIS</small></span>
+    </a>
+    <div class="header-actions"><div class="language-switch" role="group" aria-label="Language"><button type="button" class="lang-option" data-lang="en" aria-pressed="false">EN</button><span>/</span><button type="button" class="lang-option active" data-lang="es" aria-pressed="true">ES</button></div><button class="menu-toggle" type="button" aria-label="Abrir navegación" aria-expanded="false">☰</button></div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#investigacion">Introducción</a>
+      <a href="#contexto">Contexto científico</a>
+      <a href="#problema">Problema</a>
+      <a href="#sistema">Sistema de exploración</a>
+      <a href="#chimayoy">Chimayoy</a>
+      <a href="#datos">Datos satelitales</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#explorador" class="nav-application">Explorar datos <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> INVESTIGACIÓN Y OBSERVACIÓN DEL TERRITORIO</p>
+        <h1>Explorar para<br><em>comprender.</em></h1>
+        <p class="hero-lead">E.N.A. integra observación satelital, análisis de tendencias ambientales y observación terrestre complementaria para estudiar los cambios del sistema terrestre en Chimayoy, Nariño.</p>
+        <p class="project-formal-title">INVESTIGACIÓN AMBIENTAL · CHIMAYOY, NARIÑO</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#investigacion">Conocer la investigación <span>↓</span></a>
+          <a class="quiet-link" href="#chimayoy">Ver caso de estudio <span>↗</span></a>
+        </div>
+        <div class="hero-meta"><span>COLOMBIA</span><i></i><span>CHIMAYOY · PASTO, NARIÑO</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbital-label label-top"><span>LOCALIZACIÓN DEL ÁREA DE ESTUDIO</span><span>01 / 03</span></div>
+        <div id="hero-map" class="hero-map" aria-label="Mapa satelital de referencia centrado en Chimayoy, Pasto"></div>
+        <div class="map-crosshair"></div>
+        <div class="map-location"><span class="location-pulse"></span><div><b>CHIMAYOY</b><small>1.2624° N · 77.2850° O</small></div></div>
+        <div class="orbital-label label-bottom"><span>COLOMBIA · NARIÑO</span><span>CHIMAYOY</span></div>
+      </div>
+      <div class="hero-index">E.N.A. <span>—</span> 2026</div>
+    </section>
+
+    <section class="intro-section section-pad" id="investigacion">
+      <div class="section-label"><span>01</span> INTRODUCCIÓN · OBSERVACIÓN Y CAMBIO AMBIENTAL</div>
+      <div class="intro-grid">
+        <div class="intro-title-block">
+          <p class="eyebrow">OBSERVACIÓN AMBIENTAL · CHIMAYOY</p>
+          <h2>Comprender los cambios del territorio a partir de <em>evidencia.</em></h2>
+        </div>
+        <div class="intro-text">
+          <p class="large-copy">Los territorios cambian a través de procesos ambientales que se manifiestan en la disponibilidad de agua, el comportamiento de la vegetación y las condiciones térmicas de la superficie.</p>
+          <p>Reconocer esos cambios exige observar más allá de una imagen o de una medición aislada. Es necesario reunir registros obtenidos en distintos momentos, mantener criterios consistentes de análisis y estudiar cómo evoluciona cada variable. La observación satelital hace posible examinar áreas extensas y construir series temporales que permiten identificar patrones, desviaciones y posibles tendencias.</p>
+          <p>E.N.A. se desarrolla en el marco del desafío <em>Earth System Trend Detective</em> de NASA Space Apps Challenge 2026. Su investigación se concentra en Chimayoy, Nariño, y busca convertir información de observación de la Tierra en resultados comprensibles, verificables y útiles para interpretar la dinámica ambiental del área de estudio.</p>
+        </div>
+      </div>
+      <div class="intro-image-row">
+        <div class="intro-image-caption"><span>ÁREA DE INVESTIGACIÓN</span><b>Chimayoy · Pasto, Nariño</b><small>Observación regional mediante productos satelitales y análisis territorial.</small></div>
+        <div class="intro-image-photo"><img src="assets/chimayoy-paisaje-ambiental.png" alt="Paisaje del Centro Ambiental Chimayoy"><span>CHIMAYOY · PASTO, NARIÑO</span></div>
+      </div>
+      <div class="intro-bottomline"><span>ÁREA PILOTO · CHIMAYOY, NARIÑO</span><span>PERIODO DE ANÁLISIS · 2015–2025</span><span>OBSERVACIÓN DE LA TIERRA · NASA</span></div>
+    </section>
+
+    <section class="context-section section-pad" id="contexto">
+      <div class="section-label"><span>02</span> CONTEXTO CIENTÍFICO · VARIABLES Y ESCALAS DE OBSERVACIÓN</div>
+      <div class="context-heading">
+        <h2>El ambiente funciona como un sistema <em>interconectado.</em></h2>
+        <p>La precipitación, la humedad del suelo, la vegetación y la temperatura superficial describen componentes distintos del sistema terrestre. Analizarlas en conjunto permite formular preguntas sobre sus variaciones temporales y explorar cómo coinciden sus patrones, sin asumir de antemano relaciones causales.</p>
+      </div>
+      <div class="variable-gallery">
+        <article class="variable-card"><div class="variable-art art-rain"><img src="assets/illustrations/rainfall.svg" alt="Ilustración de precipitación y gotas de lluvia"><span>01</span><b>GPM</b><small>PRECIPITACIÓN</small></div><div class="variable-card-copy"><h3>Precipitación</h3><p>El aporte de agua desde la atmósfera. Su evolución permite reconocer periodos húmedos y secos y desviaciones respecto al comportamiento mensual.</p><small>GPM IMERG · mm/mes</small></div></article>
+        <article class="variable-card"><div class="variable-art art-soil"><img src="assets/illustrations/soil-moisture.svg" alt="Ilustración de humedad en capas del suelo"><span>02</span><b>SMAP</b><small>HUMEDAD DEL SUELO</small></div><div class="variable-card-copy"><h3>Indicadores de humedad del suelo</h3><p>Los indicadores describen la fracción de humedad estimada en capas superficiales y profundas del suelo. Permiten explorar su variación temporal, sin interpretarse como mediciones directas en el terreno.</p><small>NASA POWER / MERRA-2 · fracción adimensional (1)</small></div></article>
+        <article class="variable-card"><div class="variable-art art-veg"><img src="assets/illustrations/vegetation.svg" alt="Ilustración de vegetación y hojas"><span>03</span><b>NDVI / EVI</b><small>VEGETACIÓN</small></div><div class="variable-card-copy"><h3>Estado de la vegetación</h3><p>Índices espectrales que permiten estudiar cambios en la actividad y cobertura vegetal, aplicando controles de calidad.</p><small>MODIS · NDVI / EVI</small></div></article>
+        <article class="variable-card"><div class="variable-art art-temp"><img src="assets/illustrations/temperature.svg" alt="Ilustración de temperatura superficial y calor"><span>04</span><b>LST</b><small>TEMPERATURA SUPERFICIAL</small></div><div class="variable-card-copy"><h3>Temperatura superficial</h3><p>Temperatura radiométrica de la superficie terrestre; no equivale a la temperatura del aire medida en una estación.</p><small>MODIS · °C</small></div></article>
+      </div>
+      <div class="context-synthesis"><div><span class="eyebrow">LECTURA INTEGRADA</span><h3>Una variable describe una parte del sistema; su análisis conjunto aporta contexto.</h3></div><p>Las series se examinarán primero de manera individual, respetando sus unidades, resoluciones y frecuencias de observación. Posteriormente se compararán sus anomalías y periodos de variación para identificar coincidencias temporales que merezcan interpretación. Una coincidencia estadística no demuestra por sí sola una relación causal.</p></div>
+      <div class="drone-integration">
+        <div class="drone-integration-visual drone-photo-visual"><img src="assets/drone-exploracion-chimayoy.png" alt="Dron de observación aérea sobre un paisaje de bosque andino" loading="lazy"></div>
+         <div class="drone-integration-copy"><span class="eyebrow">INTEGRACIÓN CON OBSERVACIÓN TERRESTRE</span><h3>Del patrón regional a los puntos críticos.</h3><p>La investigación contempla incorporar un dron como plataforma de recolección de información en sectores de interés de Chimayoy. Sus imágenes y registros georreferenciados podrían aportar detalle local para documentar condiciones visibles del terreno y contrastar la interpretación espacial de los productos satelitales.</p><p>Esta integración exige correspondencia entre ubicación, fecha y tipo de observación. Una cámara RGB permite documentar elementos visibles, pero no mide directamente humedad del suelo ni temperatura superficial; esas variables requerirían sensores específicos. Por ello, el dron complementa la observación satelital y no sustituye las mediciones científicas de cada producto.</p></div>
+      </div>
+    </section>
+
+    <section class="problem-section section-pad" id="problema">
+      <div class="section-label"><span>03</span> PLANTEAMIENTO DEL PROBLEMA · NASA SPACE APPS CHALLENGE 2026</div>
+      <div class="problem-grid">
+        <div class="problem-statement">
+          <p class="eyebrow">PREGUNTA DE INVESTIGACIÓN</p>
+          <h2>¿Cómo distinguir una fluctuación de un <em>cambio persistente?</em></h2>
+          <p class="problem-context">La variabilidad ambiental forma parte del funcionamiento natural del sistema terrestre. Sin embargo, cuando una variable presenta cambios sostenidos, es necesario establecer si su comportamiento refleja una tendencia, dónde se manifiesta y qué magnitud alcanza. La dificultad aumenta porque las variables se miden con distintas resoluciones, escalas temporales y niveles de incertidumbre.</p>
+          <p class="problem-question">¿Qué tendencias y anomalías presentan la precipitación, la humedad superficial del suelo, la vegetación y la temperatura superficial en Chimayoy, Nariño, durante 2015–2025; dónde se manifiestan, cuál es su magnitud y qué evidencia estadística permite evaluar su significancia?</p>
+        </div>
+        <div class="problem-answer">
+          <span class="eyebrow">RESPUESTA DE E.N.A. AL PROBLEMA</span>
+          <h3>Integrar observaciones satelitales y análisis estadístico en una investigación territorial.</h3>
+          <p>E.N.A. responde mediante un flujo de trabajo que selecciona productos de observación de la Tierra, delimita espacialmente el área de Chimayoy, organiza los registros en series temporales y analiza su comportamiento. Para cada variable se documentan la fuente, la unidad, la resolución, la frecuencia y los criterios de calidad antes de calcular estadísticas.</p>
+          <p>La plataforma permitirá explorar mapas, consultar tablas y visualizar la evolución temporal, el ciclo estacional y las anomalías. La dirección y magnitud de las tendencias se estimarán con métodos estadísticos apropiados; su significancia se evaluará considerando la estacionalidad, la autocorrelación y la disponibilidad de observaciones.</p>
+          <p>La información que pueda recopilarse mediante el dron se incorporará como observación complementaria en puntos críticos, con metadatos espaciales y temporales que permitan relacionarla con la escala de los productos satelitales.</p>
+        </div>
+      </div>
+      <div class="research-questions">
+        <article><span>01 · IDENTIFICACIÓN</span><h3>¿Qué está cambiando?</h3><p>Se determina cuáles variables presentan variaciones, anomalías o tendencias a partir de sus series temporales.</p></article>
+        <article><span>02 · DISTRIBUCIÓN</span><h3>¿Dónde está cambiando?</h3><p>Se examina la distribución espacial de los registros dentro del área de estudio, respetando la resolución de cada producto.</p></article>
+        <article><span>03 · MAGNITUD</span><h3>¿Cuánto está cambiando?</h3><p>Se estima la magnitud y dirección de la variación mediante unidades propias y tasas de cambio interpretables.</p></article>
+        <article><span>04 · EVIDENCIA</span><h3>¿Es significativo?</h3><p>Se evalúa la evidencia estadística de las tendencias y se informa la incertidumbre junto con las limitaciones del análisis.</p></article>
+      </div>
+      <div class="problem-method">
+        <div><span class="eyebrow">ESTRATEGIA DE INVESTIGACIÓN</span><h3>De la observación a una conclusión sustentada.</h3></div>
+        <ol class="method-steps"><li><b>Seleccionar:</b> identificar productos satelitales adecuados para cada variable y documentar sus características técnicas.</li><li><b>Delimitar:</b> extraer observaciones que correspondan al área de Chimayoy y conservar la referencia espacial de los píxeles utilizados.</li><li><b>Preparar:</b> aplicar controles de calidad, revisar unidades, gestionar datos faltantes y armonizar las series a una frecuencia de análisis apropiada.</li><li><b>Analizar:</b> describir la variabilidad, calcular climatologías y anomalías, estimar tendencias y aplicar pruebas de significancia cuando se cumplan sus supuestos.</li><li><b>Contrastar:</b> relacionar los resultados satelitales con observaciones locales del dron cuando estén disponibles y sean comparables por ubicación, fecha y variable.</li><li><b>Comunicar:</b> presentar mapas, gráficos, tablas e interpretaciones que respondan las cuatro preguntas del desafío.</li></ol>
+      </div>
+      <div class="scope-note"><b>Delimitación de la investigación.</b> Chimayoy, en el municipio de Pasto, Nariño, constituye el área piloto. El periodo de referencia es 2015–2025. Las conclusiones se circunscribirán a las variables, productos, escalas y observaciones efectivamente analizadas.</div>
+    </section>
+
+    
+    <section class="territory-rationale-section section-pad" id="por-que-chimayoy">
+      <div class="section-label">CONTEXTO TERRITORIAL · JUSTIFICACIÓN DEL ÁREA PILOTO</div>
+      <div class="territory-rationale-grid">
+        <div>
+          <p class="eyebrow">¿POR QUÉ CHIMAYOY?</p>
+          <h2>Una investigación situada para <em>comprender y preservar.</em></h2>
+          <p>Chimayoy fue seleccionado porque permite concentrar la investigación en un territorio andino concreto, con valor ambiental, educativo y de conservación. El Centro Ambiental, reconocido por CORPONARIÑO, desarrolla actividades relacionadas con educación ambiental, investigación y conservación ecológica. Estudiar sus condiciones ambientales aporta una oportunidad para convertir datos de observación de la Tierra en información vinculada con un lugar cuya protección tiene sentido local.</p>
+          <p>El relieve montañoso hace especialmente importante interpretar las variables en su contexto. La pendiente, la orientación de las laderas, la altitud, la cobertura vegetal, la nubosidad y la circulación del agua pueden producir diferencias ambientales a distancias cortas. Los productos satelitales no captan todos esos contrastes con el mismo nivel de detalle; por eso E.N.A. informa la resolución y el alcance de cada fuente, sin atribuir a los píxeles regionales una precisión que no poseen.</p>
+        </div>
+        <div class="territory-rationale-aside">
+          <article><span>01 · ESCALA DE ESTUDIO</span><h3>De lo global a lo local</h3><p>El desafío de tendencias del sistema terrestre tiene alcance global, pero una investigación aplicada necesita un caso delimitado. Chimayoy permite desarrollar y explicar un procedimiento reproducible, reconocer sus límites y evaluar qué información resulta útil para un territorio específico.</p></article>
+          <article><span>02 · CONSERVACIÓN</span><h3>Proteger requiere comprender</h3><p>El propósito no es afirmar que el ecosistema se encuentra en deterioro ni anticipar una amenaza. Se busca establecer una línea de lectura ambiental que ayude a reconocer variaciones, formular preguntas de seguimiento y aportar información para la educación y la conservación.</p></article>
+          <article><span>03 · CONTEXTO GEOLÓGICO</span><h3>Una región de montaña activa</h3><p>El entorno de Pasto se encuentra en una región con actividad sísmica y volcánica monitoreada por el Servicio Geológico Colombiano. Estos antecedentes justifican mantener una mirada territorial responsable, pero no significan que E.N.A. mida sismos, evalúe amenaza geológica del predio o prediga terremotos. La actividad sísmica se presenta como contexto regional, no como variable ambiental del análisis.</p></article>
+        </div>
+      </div>
+      <p class="territory-source-note">Contexto institucional y geológico: CORPONARIÑO (2016) y Servicio Geológico Colombiano (2026). La información sísmica y volcánica no sustituye estudios de amenaza, geotecnia o gestión del riesgo.</p>
+    </section>
+
+    <section class="drone-section section-pad" id="sistema">
+      <div class="section-label"><span>04</span> INVESTIGACIÓN · SISTEMA DE EXPLORACIÓN</div>
+      <div class="section-heading split-heading">
+        <h2>Exploración aérea<br>con análisis visual.</h2>
+        <p>La investigación satelital se complementa con una aplicación independiente de exploración aérea. Este módulo integra visualización tridimensional del dron, información de la misión, semaforización de condiciones observadas y herramientas de inteligencia artificial para apoyar la operación y la toma de decisiones durante la exploración. Su función es aportar una perspectiva cercana del terreno que complemente, sin reemplazar, la lectura ambiental de los satélites.</p>
+      </div>
+      <div class="research-cards">
+        <article class="research-card"><span class="card-number">A / 01</span><div class="card-icon icon-drone"><span></span></div><h3>Vehículos aéreos no tripulados</h3><p>Los UAV permiten realizar observación remota, ampliar la cobertura de reconocimiento y recopilar información visual en zonas de difícil acceso.</p></article>
+        <article class="research-card"><span class="card-number">A / 02</span><div class="card-icon icon-eye"><span></span></div><h3>Visión por computador</h3><p>Los algoritmos procesan imágenes para identificar objetos, reconocer patrones y extraer características relevantes de cada escena.</p></article>
+        <article class="research-card"><span class="card-number">A / 03</span><div class="card-icon icon-brain"><span></span></div><h3>Inteligencia artificial</h3><p>Los modelos de detección permiten localizar elementos de interés y aportar información estructurada para evaluar el entorno observado.</p></article>
+      </div>
+      <div class="research-detail">
+        <div class="detail-copy"><span class="eyebrow dark-eyebrow">PROPÓSITO DEL SUBSISTEMA</span><h3>Conectar la observación aérea con la lectura del territorio.</h3><p>La aplicación reúne una vista 3D del dron, elementos de apoyo a la navegación, clasificación visual mediante semaforización y asistencia basada en inteligencia artificial. Este componente amplía las posibilidades de reconocimiento local y puede ayudar a documentar sectores que merezcan una revisión más detallada. Sus resultados deben interpretarse según los sensores, datos y funciones que realmente estén implementados.</p></div>
+        <div class="detail-quote"><span>OBJETIVO GENERAL</span><p>Diseñar un subsistema de análisis visual basado en procesamiento de imágenes e inteligencia artificial que interprete el entorno capturado por un dron y genere recomendaciones de navegación a partir de la identificación de condiciones de riesgo.</p></div>
+        <div class="drone-access-row"><a class="project-access-button" href="https://chimayoy-drone-lab.ai.studio/" target="_blank" rel="noopener noreferrer">Abrir aplicación de exploración aérea</a></div>
+      </div>
+    </section>
+
+    
+    <section class="forecast-section section-pad" id="proyecciones">
+      <div class="section-label">ANÁLISIS COMPLEMENTARIO · ESCENARIOS DE PRECIPITACIÓN</div>
+      <div class="forecast-grid">
+        <div class="forecast-copy">
+          <p class="eyebrow">¿QUÉ PODRÍA OCURRIR?</p>
+          <h2>De los registros históricos a <em>escenarios futuros.</em></h2>
+          <p>La página de análisis complementaria incorpora proyecciones de precipitación para el periodo 2025–2035, construidas a partir de registros históricos. Este componente amplía la lectura temporal de E.N.A.: mientras la investigación principal describe y evalúa el comportamiento observado en las fuentes históricas, las proyecciones exploran posibles continuidades o cambios bajo el método y los supuestos utilizados.</p>
+          <p>Las proyecciones no deben confundirse con pronósticos meteorológicos operativos ni con certezas sobre la lluvia que ocurrirá en una fecha determinada. Su interpretación depende de la serie histórica, el procedimiento estadístico, los supuestos y la incertidumbre del modelo. Por esa razón, E.N.A. las presenta como un módulo complementario y no como sustituto de los resultados observados.</p>
+        </div>
+        <div class="forecast-panel">
+          <span class="forecast-range">HORIZONTE DE PROYECCIÓN</span>
+          <strong>2025–2035</strong>
+          <p>Precipitación · estimaciones basadas en datos históricos</p>
+          <div class="forecast-divider"></div>
+          <p class="forecast-note">La lectura de escenarios futuros se mantiene diferenciada del análisis retrospectivo 2015–2025.</p>
+          <a class="project-access-button" href="https://stefania2.github.io/earth-detective/" target="_blank" rel="noopener noreferrer">Acceder a proyecciones de precipitación</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-section">
+      <div class="section-pad">
+        <div class="section-label light-label"><span>05</span> METODOLOGÍA DE ANÁLISIS</div>
+        <div class="section-heading split-heading light-heading"><h2>Una secuencia<br>de interpretación.</h2><p>La metodología organiza el trabajo en etapas conectadas. Cada módulo prepara o interpreta la información que recibe del anterior, manteniendo una arquitectura comprensible y ampliable.</p></div>
+        <div class="workflow-list">
+          <article><span class="workflow-no">01</span><div><h3>Construcción del conjunto de datos</h3><p>Organización de imágenes representativas según las condiciones observadas en los entornos de exploración.</p></div><div class="workflow-tags"><span>Zona segura</span><span>Obstáculo</span><span>Zona con agua</span><span>Sin clasificar</span></div></article>
+          <article><span class="workflow-no">02</span><div><h3>Procesamiento visual</h3><p>Preparación de imágenes mediante OpenCV: adquisición, normalización y operaciones que facilitan el análisis posterior.</p></div><div class="workflow-tech">OPENCV · PYTHON</div></article>
+          <article><span class="workflow-no">03</span><div><h3>Detección y clasificación</h3><p>Identificación de personas, vehículos, animales y objetos relevantes mediante YOLOv8 y Ultralytics.</p></div><div class="workflow-tech">YOLOV8 · ULTRALYTICS</div></article>
+          <article><span class="workflow-no">04</span><div><h3>Evaluación del entorno</h3><p>Interpretación de los elementos detectados y asignación de un nivel de riesgo a partir de criterios definidos.</p></div><div class="workflow-tech">CRITERIOS DE RIESGO</div></article>
+          <article><span class="workflow-no">05</span><div><h3>Recomendaciones y registro</h3><p>Generación de orientaciones para la navegación y almacenamiento de eventos para su revisión posterior.</p></div><div class="workflow-tech">CSV · INDICADORES</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="classification-section section-pad">
+      <div class="section-label"><span>06</span> CLASIFICACIÓN DEL ENTORNO</div>
+      <div class="section-heading split-heading"><h2>Cuatro categorías<br>para describir la escena.</h2><p>La organización del conjunto de imágenes establece una referencia para identificar condiciones relevantes durante una misión de exploración.</p></div>
+      <div class="category-grid">
+        <article class="category-card"><div class="category-top"><span class="category-dot safe"></span><span>01 / BAJO</span></div><h3>Zona segura</h3><p>Áreas abiertas, caminos despejados o espacios con margen suficiente para el desplazamiento.</p></article>
+        <article class="category-card"><div class="category-top"><span class="category-dot caution"></span><span>02 / MEDIO</span></div><h3>Obstáculo</h3><p>Árboles, rocas, estructuras, postes y otros elementos que pueden limitar la trayectoria.</p></article>
+        <article class="category-card"><div class="category-top"><span class="category-dot water"></span><span>03 / ALTO</span></div><h3>Zona con agua</h3><p>Ríos, lagunas, inundaciones o acumulaciones de agua que requieren atención durante la exploración.</p></article>
+        <article class="category-card"><div class="category-top"><span class="category-dot unassigned"></span><span>04 / PENDIENTE DE REVISIÓN</span></div><h3>Sin clasificar</h3><p>Imágenes que aún no han sido etiquetadas o cuya categoría requiere validación.</p></article>
+      </div>
+      <div class="risk-strip"><div class="risk-lights" aria-label="Semáforo de riesgo"><button type="button" class="risk-light red" data-risk="red" aria-label="Riesgo alto"></button><button type="button" class="risk-light yellow" data-risk="yellow" aria-label="Riesgo medio"></button><button type="button" class="risk-light green active" data-risk="green" aria-label="Riesgo bajo"></button></div><div class="risk-explain"><article data-risk-description="green" class="selected"><b>Riesgo bajo</b><small>Continuar la exploración cuando las condiciones estén verificadas.</small></article><article data-risk-description="yellow"><b>Riesgo medio</b><small>Actuar con precaución y revisar la trayectoria.</small></article><article data-risk-description="red"><b>Riesgo alto</b><small>Detener o reevaluar la ruta antes de continuar.</small></article></div></div>
+      <div class="recommendation-row"><span>RESPUESTA DEL SISTEMA</span><b>Avanzar</b><i>→</i><b>Precaución</b><i>→</i><b>Evitar</b><i>→</i><b>Desviar ruta</b><i>→</i><b>Detener</b></div>
+    </section>
+
+    <section class="architecture-section section-pad">
+      <div class="section-label"><span>07</span> ARQUITECTURA GENERAL</div>
+      <div class="section-heading split-heading"><h2>Del fotograma<br>al registro.</h2><p>El flujo propuesto conserva la separación entre captura, procesamiento, detección, evaluación y almacenamiento. Esta estructura facilita la trazabilidad de la información generada durante cada misión.</p></div>
+      <div class="architecture-flow">
+        <div class="architecture-node"><span>01</span><b>Captura de imágenes</b><small>Cámara RGB</small></div><i>→</i>
+        <div class="architecture-node"><span>02</span><b>Procesamiento visual</b><small>OpenCV</small></div><i>→</i>
+        <div class="architecture-node"><span>03</span><b>Detección</b><small>YOLOv8</small></div><i>→</i>
+        <div class="architecture-node"><span>04</span><b>Evaluación</b><small>Reglas de riesgo</small></div><i>→</i>
+        <div class="architecture-node"><span>05</span><b>Registro</b><small>Historial CSV</small></div>
+      </div>
+      <div class="tools-line"><span>ENTORNO Y HERRAMIENTAS</span><b>Python</b><b>OpenCV</b><b>Ultralytics</b><b>NumPy</b><b>CSV</b><b>Visual Studio Code</b></div>
+      <div class="event-record"><div><span class="eyebrow dark-eyebrow">TRAZABILIDAD</span><h3>Un historial estructurado para cada misión.</h3><p>Los eventos consolidados permiten construir indicadores sobre objetos, obstáculos y zonas de riesgo identificadas durante la exploración.</p></div><div class="event-fields"><span>DATOS REGISTRADOS</span><b>Fecha y hora</b><b>Objeto o elemento identificado</b><b>Nivel de confianza</b><b>Estado asociado</b><b>Clasificación y observaciones</b></div></div>
+    </section>
+
+    <section class="chimayoy-section" id="chimayoy">
+      <div class="chimayoy-image" role="group" aria-label="Imagen satelital del área de Chimayoy, Pasto, Nariño"><div id="chimayoy-map" class="chimayoy-map"></div><div class="image-corner">VISTA SATELITAL · CHIMAYOY</div></div>
+      <div class="chimayoy-copy">
+        <div class="section-label light-label"><span>08</span> APLICACIÓN DEL ANÁLISIS AMBIENTAL</div>
+        <p class="eyebrow">CASO DE ESTUDIO · COLOMBIA</p>
+        <h2>Chimayoy:<br><em>del sistema al territorio.</em></h2>
+        <p>Chimayoy, en el entorno de Pasto, Nariño, constituye el área piloto de la investigación ambiental de E.N.A. La selección de esta zona permite delimitar la consulta de productos satelitales y estudiar la evolución temporal de variables relacionadas con el agua, la vegetación y las condiciones térmicas de la superficie.</p>
+        <p>El análisis satelital constituye la base de la investigación. La observación terrestre mediante dron se plantea como un recurso complementario para documentar puntos críticos y aportar detalle local a la interpretación de los patrones regionales.</p>
+        <div class="location-facts"><div><span>ÁREA DE ESTUDIO</span><b>Chimayoy</b></div><div><span>DEPARTAMENTO</span><b>Nariño, Colombia</b></div><div><span>COORDENADAS DE REFERENCIA</span><b>1.2624° N · 77.2850° O</b></div></div>
+      </div>
+    </section>
+
+    <section class="photo-story section-pad" id="galeria-chimayoy">
+      <div class="section-label"><span>08A</span> REGISTRO VISUAL · CONTEXTO DEL ÁREA PILOTO</div>
+      <div class="photo-story-head"><h2>Un territorio real.<br><em>Una investigación situada.</em></h2><p>Las fotografías documentan el entorno del Centro Ambiental Chimayoy y ayudan a contextualizar el área de estudio. No sustituyen las imágenes satelitales ni se utilizan como mediciones cuantitativas.</p></div>
+      <div class="photo-grid">
+        <figure class="photo-main"><img src="assets/chimayoy-paisaje-ambiental.png" alt="Centro Ambiental Chimayoy y paisaje montañoso de Nariño, fotografía compartida por el equipo"><figcaption><b>Centro Ambiental Chimayoy</b><span>Fotografía de referencia aportada al proyecto</span></figcaption></figure>
+        <figure><img src="assets/chimayoy-vista-aerea-referencia.png" alt="Vista aérea de las instalaciones y cobertura vegetal de Chimayoy, imagen de referencia compartida"><figcaption><b>Vista aérea del entorno</b><span>Imagen de referencia compartida; contiene marca de autor</span></figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Centro_Ambiental_Chimayoy.jpg" alt="Letrero de ingreso al Centro Ambiental Chimayoy" loading="lazy"><figcaption><b>Identidad del centro ambiental</b><span>Υ.Γ. · Wikimedia Commons · CC BY-SA 4.0</span></figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Centro_Ambiental_Chimayoy%2C_acceso.jpg" alt="Vía de acceso al Centro Ambiental Chimayoy, rodeada de vegetación" loading="lazy"><figcaption><b>Sendero de acceso</b><span>Υ.Γ. · Wikimedia Commons · CC BY-SA 4.0</span></figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Centro_ambiental_Chimayoy%2C_museo.jpg" alt="Edificación del Centro Ambiental Chimayoy junto al bosque" loading="lazy"><figcaption><b>Instalaciones y entorno</b><span>Υ.Γ. · Wikimedia Commons · CC BY-SA 4.0</span></figcaption></figure>
+      </div>
+      <p class="photo-credit">Fotografías externas: Υ.Γ., <a href="https://commons.wikimedia.org/wiki/File:Centro_Ambiental_Chimayoy.jpg" target="_blank" rel="noopener">Centro Ambiental Chimayoy</a>, <a href="https://commons.wikimedia.org/wiki/File:Centro_Ambiental_Chimayoy,_acceso.jpg" target="_blank" rel="noopener">acceso</a> y <a href="https://commons.wikimedia.org/wiki/File:Centro_ambiental_Chimayoy,_museo.jpg" target="_blank" rel="noopener">museo</a>, Wikimedia Commons, licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Se conserva la atribución y la licencia de compartir igual.</p>
+    </section>
+
+    <section class="satellite-section section-pad" id="datos">
+      <div class="section-label"><span>09</span> OBSERVACIÓN SATELITAL Y VARIABLES</div>
+      <div class="section-heading split-heading"><h2>Una ventana<br>hacia los datos.</h2><p>Los productos de observación de la Tierra permiten consultar variables ambientales con cobertura espacial y temporal. La selección de cada producto depende de su resolución, periodo disponible, unidades y adecuación a la escala de Chimayoy.</p></div>
+      <div class="data-source-grid">
+        <article class="source-card source-active"><span class="source-index">01</span><div class="source-icon rain-icon">≈</div><div><span class="source-status">INTEGRADO · 63 VÁLIDOS / 5 FALTANTES</span><h3>Precipitación</h3><p>GPM IMERG mensual · NASA</p><small>Producto 3IMERGM V07B. La tasa original precipitation se documenta en mm/h y el archivo procesado conserva también la acumulación mensual en mm/mes. La serie disponible cubre enero de 2020 a agosto de 2025: 63 meses observados y cinco meses marcados como faltantes. Su resolución de 0.1° (aprox. 10 km) aporta contexto regional, no una medición puntual del sitio.</small></div><b class="source-arrow">↗</b></article>
+        <article class="source-card"><span class="source-index">02</span><div class="source-icon soil-icon">◌</div><div><span class="source-status">FUENTE COMPLEMENTARIA · EXTRACCIÓN EN PROCESO</span><h3>Humedad del suelo</h3><p>SMAP · NASA</p><small>Se utilizará SMAP L4 SPL4SMGP.008: estimaciones de humedad superficial y de zona radicular con resolución aproximada de 9 km y frecuencia de 3 horas. Es un producto de asimilación y modelación; ofrece estimaciones de humedad superficial y de zona radicular, por lo que ambas capas deben distinguirse en el análisis. Los periodos de versiones distintas se documentarán para evitar saltos artificiales.</small></div><b class="source-arrow">↗</b></article>
+        <article class="source-card source-active"><span class="source-index">03</span><div class="source-icon soil-icon">◌</div><div><span class="source-status">INTEGRADO · 132 REGISTROS POR INDICADOR</span><h3>Indicadores de humedad del suelo</h3><p>NASA POWER / MERRA-2 · 2015–2025</p><small>Se integraron GWETTOP (humedad superficial, 0–5 cm), GWETROOT (zona radicular) y GWETPROF (perfil del suelo), con 132 registros mensuales por indicador. Los valores se conservan como fracción adimensional (1). Son estimaciones regionales modeladas/asimiladas: no corresponden a mediciones in situ, no equivalen a contenido volumétrico en m³/m³ y no son datos SMAP.</small></div><b class="source-arrow">↗</b></article>
+        <article class="source-card"><span class="source-index">04</span><div class="source-icon leaf-icon">✳</div><div><span class="source-status">INTEGRADO · 63 FECHAS VÁLIDAS POR ÍNDICE</span><h3>Vegetación</h3><p>MODIS Terra · NDVI / EVI</p><small>MOD13Q1 V061 entrega NDVI y EVI cada 16 días a 250 m. Las series se extrajeron sobre la geometría catastral de referencia, aplicando el factor 0,0001 y conservando únicamente píxeles con Pixel Reliability = 0. Los índices describen la respuesta espectral de la vegetación; no son mediciones directas de biomasa o biodiversidad.</small></div><b class="source-arrow">↗</b></article>
+        <article class="source-card"><span class="source-index">05</span><div class="source-icon temp-icon">⌁</div><div><span class="source-status">INTEGRADO · 97 DÍA / 59 NOCHE</span><h3>Temperatura de superficie</h3><p>MODIS Terra · MOD11A2 V061</p><small>Compuestos de ocho días a 1 km. Se aplicó el factor de escala 0,02 y la conversión a °C, conservando únicamente observaciones con bits QA obligatorios = 00. La cobertura nocturna es menor por falta de capas QC coincidentes. Se interpreta como contexto térmico regional, no como temperatura del aire ni detalle de cada parcela.</small></div><b class="source-arrow">↗</b></article>
+      </div>
+      <div class="satellite-note"><span class="note-symbol">i</span><p>La capa del mapa muestra imágenes satelitales para ubicar visualmente el área de estudio. Los gráficos cuantitativos se calculan a partir de los archivos científicos descargados y filtrados por coordenadas; una imagen satelital no sustituye esos datos numéricos.</p></div>
+    </section>
+
+    <section class="map-data-section">
+      <div class="section-pad map-data-grid">
+        <div class="map-data-copy"><div class="section-label light-label"><span>10</span> FILTRO GEOGRÁFICO</div><h2>Del producto global<br>a un área concreta.</h2><p>El mapa presenta la geometría catastral de referencia utilizada en las extracciones y el punto de localización de Chimayoy. El polígono tiene aproximadamente 49,10 ha; se utiliza como delimitación operativa de análisis y no como certificación del perímetro institucional completo del Centro Ambiental.</p><div class="coordinate-box"><span>GEOMETRÍA DE REFERENCIA</span><b>≈49,10 ha</b><small>Centro de referencia: 1.2624° N · 77.2850° O</small><small>Polígono catastral empleado para el análisis espacial.</small></div></div>
+        <div class="map-panel"><div class="map-panel-head"><div><span>DELIMITACIÓN ESPACIAL</span><b>Polígono de estudio · Chimayoy</b></div><span class="live-indicator">MAPA INTERACTIVO</span></div><div id="study-map" class="study-map" aria-label="Mapa interactivo con imágenes satelitales de NASA para Chimayoy"></div><div class="map-panel-foot"><span>BASE CARTOGRÁFICA · CARTO / OPENSTREETMAP</span><span>GEOJSON · WGS 84</span></div></div>
+      </div>
+    </section>
+
+    <section class="charts-section section-pad" id="explorador">
+      <div class="section-label"><span>11</span> EXPLORADOR DE DATOS · SERIES Y GRÁFICOS</div>
+      <div class="section-heading split-heading"><h2>Explorar las señales<br>ambientales.</h2><p>Selecciona una variable y consulta todos sus registros disponibles, un año o un mes específico. Puedes comparar periodos, explorar las gráficas y descargar la serie filtrada junto con sus metadatos.</p></div>
+      <div class="explorer-layout">
+        <div class="explorer-map-card"><div class="explorer-card-title"><span>ÁREA DE ESTUDIO</span><b>Chimayoy · Nariño</b></div><div id="results-map" class="results-map" aria-label="Mapa de referencia de Chimayoy"></div><div class="explorer-map-foot">1.2624° N · 77.2850° O <span>RECUADRO DE CONSULTA</span></div></div>
+        <div class="explorer-controls">
+          <div class="explorer-card-title"><span>CONFIGURACIÓN DEL ANÁLISIS</span><b>Capas para investigar</b></div>
+          <label for="variable-select">Variable ambiental</label>
+          <select id="variable-select"><option value="precip">Precipitación acumulada · GPM IMERG</option><option value="precip_grid">Precipitación regional · cuadrícula 5×5 GPM</option><option value="ndvi">Vegetación · NDVI (MODIS)</option><option value="evi">Vegetación · EVI (MODIS)</option><option value="temp">Temperatura superficial diurna · LST</option><option value="lstnight">Temperatura superficial nocturna · LST</option><option value="power_t2m">Temperatura del aire · NASA POWER</option><option value="power_rh2m">Humedad relativa · NASA POWER</option><option value="power_precip">Precipitación corregida · NASA POWER</option><option value="power_ws10m">Velocidad del viento · NASA POWER</option><option value="power_solar">Radiación solar · NASA POWER</option><option value="power_t2m_max">Temperatura máxima del aire · NASA POWER</option><option value="power_t2m_min">Temperatura mínima del aire · NASA POWER</option><option value="soil_top">Humedad superficial del suelo · MERRA-2 (0–5 cm)</option><option value="soil_root">Humedad de la zona radicular · MERRA-2 (0–100 cm)</option><option value="soil_profile">Humedad del perfil del suelo · MERRA-2</option></select>
+          <div id="grid-point-control" class="grid-point-control hidden"><label for="gpm-grid-point">Centro de celda GPM</label><select id="gpm-grid-point" aria-label="Seleccionar centro de celda de la cuadrícula GPM"></select></div>
+          <div class="year-controls"><label for="time-mode">Vista temporal</label><select id="time-mode"><option value="all">Toda la serie disponible</option><option value="year">Año específico</option><option value="month">Mes específico</option><option value="range">Intervalo de años</option></select><div class="time-filter-row"><select id="year-start" aria-label="Año inicial"><option>2015</option><option>2016</option><option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option><option>2025</option></select><span id="year-until">hasta</span><select id="year-end" aria-label="Año final"><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option></select><select id="month-select" aria-label="Mes"><option value="0">Enero</option><option value="1">Febrero</option><option value="2">Marzo</option><option value="3">Abril</option><option value="4">Mayo</option><option value="5">Junio</option><option value="6">Julio</option><option value="7">Agosto</option><option value="8">Septiembre</option><option value="9">Octubre</option><option value="10">Noviembre</option><option value="11">Diciembre</option></select></div></div>
+          <div class="selected-layer"><span>VARIABLE SELECCIONADA</span><b id="selected-variable-name">Precipitación · GPM IMERG</b><small id="selected-variable-meta">Acumulación mensual · mm/mes</small></div>
+          <p class="explorer-hint" id="file-status">Conectando las series procesadas incluidas en E.N.A.…</p>
+          <a class="file-button file-button-wide" href="#descargas">Consultar y descargar archivos <span>↓</span></a><details class="quick-downloads"><summary>Descargar conjuntos de datos</summary><div><a href="data/processed/gpm_monthly.json" download>GPM IMERG · mensual <span>JSON ↓</span></a><a href="data/processed/modis_ndvi_16day.json" download>MODIS · NDVI <span>JSON ↓</span></a><a href="data/processed/modis_evi_16day.json" download>MODIS · EVI <span>JSON ↓</span></a><a href="data/processed/modis_lst_day_8day.json" download>MODIS · LST diurna <span>JSON ↓</span></a><a href="data/processed/modis_lst_night_8day.json" download>MODIS · LST nocturna <span>JSON ↓</span></a><a href="data/processed/nasa_power_monthly.json" download>NASA POWER <span>JSON ↓</span></a><a href="data/processed/humidity_indicators.json" download>NASA POWER / MERRA-2 · Humedad del suelo <span>JSON ↓</span></a><a href="data/processed/chimayoy_cadastral_reference.geojson" download>Polígono de referencia <span>GEOJSON ↓</span></a></div></details>
+        </div>
+      </div>
+      <div class="dataset-status-grid" id="dataset-status-grid" aria-live="polite"></div>
+      <div class="chart-toolbar"><div><span class="data-chip"></span><b id="chart-main-title">Precipitación mensual · Chimayoy</b><small id="chart-source-label">NASA GPM IMERG · mm/mes</small></div><span class="data-chip-label" id="record-count">SELECCIONA UNA SERIE</span></div>
+      <div class="chart-grid">
+        <article class="chart-card chart-wide"><div class="chart-card-head"><div><span>01 / SERIE TEMPORAL</span><h3 id="series-title">Evolución mensual de precipitación</h3></div><span class="chart-unit" id="series-unit">mm / mes</span></div><div class="chart-canvas-wrap"><canvas id="precip-chart" aria-label="Gráfico de serie temporal de la variable seleccionada"></canvas><div class="chart-empty" id="chart-empty">Selecciona el archivo procesado de esta variable para consultar su evolución temporal.</div></div></article>
+        <article class="chart-card"><div class="chart-card-head"><div><span>02 / CICLO ANUAL</span><h3>Comportamiento por mes</h3></div><span class="chart-unit" id="season-unit">valor medio</span></div><div class="chart-canvas-wrap"><canvas id="season-chart"></canvas><div class="chart-empty compact-empty" id="season-empty">El ciclo anual se calculará al cargar la serie.</div></div></article>
+        <article class="chart-card"><div class="chart-card-head"><div><span>03 / DESVIACIÓN</span><h3>Anomalías respecto a climatología</h3></div><span class="chart-unit" id="anomaly-unit">anomalía</span></div><div class="chart-canvas-wrap"><canvas id="anomaly-chart"></canvas><div class="chart-empty compact-empty" id="anomaly-empty">Las anomalías se calcularán con respecto al promedio de cada mes.</div></div></article>
+      </div>
+      <div class="data-table-wrap"><div class="data-table-heading"><div><span>04 / REGISTRO PROCESADO</span><h3>Observaciones de la serie</h3></div><span id="table-range">Sin datos</span></div><div class="table-scroll"><table class="data-table"><thead><tr><th>Fecha</th><th>Valor</th><th>Unidad</th><th>Anomalía</th></tr></thead><tbody id="data-table-body"><tr><td colspan="4">Carga un archivo para consultar las observaciones procesadas.</td></tr></tbody></table></div></div>
+      <div class="data-footnote" id="data-summary">La lectura de cada serie debe considerar su unidad, resolución espacial, frecuencia de observación y criterios de calidad. La significancia estadística se establece mediante pruebas específicas y no únicamente por la apariencia de la curva.</div>
+      <details class="chart-guide"><summary>¿Cómo interpretar estos gráficos?</summary><div><p><b>Serie temporal:</b> muestra la evolución de la variable en el tiempo.</p><p><b>Ciclo anual:</b> resume el comportamiento medio de cada mes dentro del periodo seleccionado.</p><p><b>Anomalías:</b> expresan la diferencia frente al promedio del mismo mes del periodo seleccionado; son descriptivas y cambian al modificar el intervalo.</p><p><b>Tabla:</b> permite consultar fechas, valores, unidades y desviaciones. La cantidad de observaciones depende de la cobertura y los filtros de calidad de cada producto.</p></div></details>
+      <section class="download-center" id="descargas"><div><span class="eyebrow">DATOS ABIERTOS DEL PROYECTO</span><h3>Consulta y descarga los archivos.</h3><p>Los archivos se ofrecen en su formato original o procesado. Revisa el manifiesto para conocer fuente, unidad, cobertura y limitaciones antes de reutilizarlos.</p></div><div class="download-links"><a href="data/processed/gpm_monthly.json" download>GPM IMERG · Serie procesada <span>JSON ↓</span></a><a href="data/processed/gpm_spatial_grid.json" download>GPM · Cuadrícula regional <span>JSON ↓</span></a><a href="data/processed/modis_ndvi_16day.json" download>MODIS · NDVI <span>JSON ↓</span></a><a href="data/processed/modis_evi_16day.json" download>MODIS · EVI <span>JSON ↓</span></a><a href="data/processed/modis_lst_day_8day.json" download>MODIS · LST diurna <span>JSON ↓</span></a><a href="data/processed/modis_lst_night_8day.json" download>MODIS · LST nocturna <span>JSON ↓</span></a><a href="data/processed/nasa_power_monthly.json" download>NASA POWER · Series mensuales <span>JSON ↓</span></a><a href="data/processed/humidity_indicators.json" download>NASA POWER / MERRA-2 · Indicadores de humedad del suelo <span>JSON ↓</span></a><a href="data/source/chimayoy_nasa_real_2015_2025.csv" download>CSV original · Indicadores ambientales y humedad <span>CSV ↓</span></a><a href="data/processed/chimayoy_cadastral_reference.geojson" download>Polígono de referencia <span>GeoJSON ↓</span></a><a href="data/manifest.json" download>Manifiesto de datos <span>JSON ↓</span></a><a href="data/source/gpm_chimayoy_monthly.csv" download>GPM · CSV de serie mensual <span>CSV ↓</span></a><a href="data/source/precipitacion_chimayoy.csv" download>GPM · Cuadrícula CSV <span>CSV ↓</span></a><a href="data/source/POWER_Point_Monthly.csv" download>NASA POWER · CSV original <span>CSV ↓</span></a><a href="docs/ENA_Investigacion_Chimayoy_APA7.docx" download>Investigación completa <span>DOCX ↓</span></a><a href="docs/ENA_Auditoria_inicial_datos.xlsx" download>Auditoría de datos <span>XLSX ↓</span></a></div></section>
+    </section>
+
+    <section class="interpretation-section section-pad" id="resultados">
+      <div class="section-label"><span>12</span> RESULTADOS E INTERPRETACIÓN · LECTURA DE LOS DATOS</div>
+      <div class="interpretation-heading"><h2>Qué nos cuentan<br><em>las series ambientales.</em></h2><p>Esta lectura resume las observaciones procesadas que ya están disponibles. Los indicadores descriptivos se actualizan al seleccionar una variable en el explorador; no sustituyen las pruebas estadísticas de tendencia ni demuestran relaciones causales.</p></div>
+      <div class="result-summary-grid" id="result-summary-grid"><article class="result-placeholder"><span>DATOS PROCESADOS</span><h3>Preparando lectura descriptiva</h3><p>Los indicadores se completarán a partir de las series incluidas en el proyecto.</p></article></div>
+      <div class="interpretation-live" id="interpretation-live"><span>LECTURA DE LA VARIABLE SELECCIONADA</span><p>Selecciona una variable en el explorador para consultar su resumen descriptivo, cobertura temporal, promedio y valores extremos.</p></div>
+      <div class="interpretation-caution"><span>CRITERIO DE INTERPRETACIÓN</span><p>Las observaciones se interpretan respetando su unidad, resolución, frecuencia y control de calidad. GPM y NASA POWER aportan contexto regional; MODIS NDVI/EVI y LST representan productos satelitales con escalas espaciales distintas. La geometría utilizada es una referencia catastral operativa, no una certificación del perímetro institucional del parque.</p></div>
+    </section>
+
+
+    <section class="team-section section-pad" id="equipo">
+      <div class="section-label"><span>13</span> EQUIPO DE INVESTIGACIÓN</div>
+      <h2>Equipo de trabajo</h2>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-photo"><img src="assets/team/angie-katherine-eraso.webp" alt="Retrato de Angie Katherine Eraso Eraso" loading="lazy"></div>
+          <div class="team-card-copy">
+            <span class="team-index">INTEGRANTE 01</span>
+            <h3>Angie Katherine Eraso Eraso</h3>
+            <p class="team-degree">Ingeniería Electrónica · Séptimo semestre</p>
+            <p class="team-affiliation">Universidad Nacional Abierta y a Distancia (UNAD) · CEAD Pasto, Nariño</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="team-photo"><img src="assets/team/mayelin-stefania-aguilar.webp" alt="Retrato de Mayelin Stefania Aguilar Vásquez" loading="lazy"></div>
+          <div class="team-card-copy">
+            <span class="team-index">INTEGRANTE 02</span>
+            <h3>Mayelin Stefania Aguilar Vásquez</h3>
+            <p class="team-degree">Ingeniería Electrónica · Décimo semestre</p>
+            <p class="team-affiliation">Universidad Nacional Abierta y a Distancia (UNAD) · CCAV Zipaquirá</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="team-photo"><img src="assets/team/alicia-margarita-moreno.webp" alt="Retrato de Alicia Margarita Moreno Beleño" loading="lazy"></div>
+          <div class="team-card-copy">
+            <span class="team-index">INTEGRANTE 03</span>
+            <h3>Alicia Margarita Moreno Beleño</h3>
+            <p class="team-degree">Ingeniería de Sistemas · Cuarto semestre</p>
+            <p class="team-affiliation">Universidad Nacional Abierta y a Distancia (UNAD) · CEAD Santa Marta</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="references-section section-pad" id="referencias">
+      <div class="section-label"><span>14</span> REFERENCIAS Y DOCUMENTACIÓN</div>
+      <h2>Fuentes científicas y documentación técnica</h2>
+      <div class="references-reserved"><p>La investigación completa, la auditoría de los insumos y el manifiesto de cobertura acompañan esta plataforma para permitir la consulta y reproducción del trabajo.</p><ul class="reference-list">
+<li>NASA Global Precipitation Measurement Mission. (2023). <em>IMERG V07 technical documentation</em>. <a href="https://gpm.nasa.gov/resources/documents/imerg-v07-technical-documentation" target="_blank" rel="noopener">GPM</a>.</li>
+<li>NASA Global Precipitation Measurement Mission. (2026). <em>IMERG V07 algorithm theoretical basis document</em>. <a href="https://gpm.nasa.gov/resources/documents/imerg-v07-atbd" target="_blank" rel="noopener">GPM</a>.</li>
+<li>NASA Land Processes Distributed Active Archive Center. (s. f.). <em>MOD13Q1: MODIS/Terra vegetation indices 16-day L3 global 250 m SIN grid</em>. <a href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MOD13Q1/" target="_blank" rel="noopener">LP DAAC</a>.</li>
+<li>NASA Land Processes Distributed Active Archive Center. (s. f.). <em>MOD11A2: MODIS/Terra land surface temperature/emissivity 8-day L3 global 1 km SIN grid</em>. <a href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MOD11A2/" target="_blank" rel="noopener">LP DAAC</a>.</li>
+<li>NASA POWER. (s. f.). <em>Data sources: Meteorology</em>. <a href="https://power.larc.nasa.gov/docs/methodology/data/sources_meteorology/" target="_blank" rel="noopener">NASA POWER</a>.</li>
+<li>Corporación Autónoma Regional de Nariño. (2016). <em>Elaboración del Plan de Ordenación y Manejo de la Cuenca: Caracterización político-administrativa</em>. <a href="https://corponarino.gov.co/wp-content/uploads/2018/08/6-Caracterizaci%C3%B3n-pol%C3%ADtico-administrativa.pdf" target="_blank" rel="noopener">CORPONARIÑO</a>.</li>
+<li>Servicio Geológico Colombiano. (2026, 30 de octubre). <em>Boletín mensual: Actividad volcánica del segmento sur de Colombia, septiembre de 2026</em>. <a href="https://www2.sgc.gov.co/Noticias/boletinesDocumentos/Boletin_volcanes_sur_septiembre_2026.pdf" target="_blank" rel="noopener">SGC</a>.</li>
+<li>Servicio Geológico Colombiano. (2026, agosto). <em>Manual de usuario del aplicativo de consulta de la base de datos de fallas activas de Colombia</em>. <a href="https://srvags.sgc.gov.co/PortalWeb/Elementos-web/Geoportal/Fallas-activas/manual_fallas_activas_2026_V1.html" target="_blank" rel="noopener">SGC</a>.</li>
+<li>National Snow and Ice Data Center. (s. f.). <em>SMAP L4 global 3-hourly 9 km EASE-Grid surface and root zone soil moisture geophysical data, version 7</em>. <a href="https://nsidc.org/data/spl4smgp" target="_blank" rel="noopener">NSIDC</a>.</li>
+<li>Universidad de Nariño, Repositorio Institucional. (s. f.). <em>Documento académico sobre uso de hábitat en un fragmento de bosque altoandino del Parque Ambiental Chimayoy</em>. <a href="https://sired.udenar.edu.co/11019/1/81556.pdf" target="_blank" rel="noopener">Repositorio</a>.</li>
+</ul><div class="reference-downloads"><a href="docs/ENA_Investigacion_Chimayoy_APA7.docx" download>Descargar investigación completa (DOCX)</a><a href="docs/ENA_Auditoria_inicial_datos.xlsx" download>Descargar auditoría de datos (XLSX)</a><a href="data/manifest.json" target="_blank" rel="noopener">Consultar manifiesto de datos</a></div></div>
+    </section>
+
+    <section class="closing-section">
+      <div class="section-pad closing-inner"><div><span class="eyebrow">E.N.A. · INVESTIGACIÓN Y OBSERVACIÓN</span><h2>Conectar tecnología,<br><em>datos y territorio.</em></h2></div><p>La observación satelital permite reconocer patrones regionales y cambios de largo plazo. El subsistema UAV proyectado complementará ese análisis con imágenes RGB georreferenciadas y observaciones localizadas, una vez se realicen los vuelos y se documenten sus condiciones de captura. E.N.A. distinguirá siempre las mediciones de campo de las estimaciones satelitales.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-symbol"><span></span><span></span><span></span></span><span class="brand-name">E.N.A.<small>INVESTIGACIÓN Y OBSERVACIÓN</small></span></a><span>CHIMAYOY · PASTO, NARIÑO · COLOMBIA</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/ena-interacciones.js?v=18"></script>
+</body>
+</html>
